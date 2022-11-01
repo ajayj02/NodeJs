@@ -52,3 +52,21 @@ download('http://ajay.pg')
 
     console.log(err);
 })
+
+
+
+
+
+
+
+Promise.all([
+    download('http://ajay.png'),
+    download('http://ajay.png'),
+    download('http://ajay.png'),
+]).then((values)=>{
+    console.log(values);
+})
+.catch((err)=>{
+    console.error(err);
+})
+// resolve all promises parallely values contains resolve values of all the three promises
